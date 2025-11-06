@@ -67,4 +67,5 @@ class Zombie:
             if self.width == 100:
                 self.width = self.width / 2
                 self.height = self.height / 2
+                self.y -= 50
 
