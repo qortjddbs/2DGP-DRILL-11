@@ -182,6 +182,7 @@ class Boy:
             # 볼을 만드는 위치이기 때문에 여기서 넣어준다. (볼을 컬리전 페어에)
             game_world.add_collision_pair('grass:ball', None, ball)
             game_world.add_collision_pair('boy:ball', None, ball)
+            game_world.add_collision_pair('None:ball', None, ball)
 
     def get_bb(self):
         return self.x-20, self.y-40, self.x+20, self.y+40   # 튜플
