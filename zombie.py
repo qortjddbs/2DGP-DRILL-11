@@ -68,4 +68,5 @@ class Zombie:
                 self.width = self.width / 2
                 self.height = self.height / 2
                 self.y -= 50
-
+            elif self.width == 50:
+                game_world.remove_object(self)
