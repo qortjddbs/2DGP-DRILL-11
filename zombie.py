@@ -63,7 +63,8 @@ class Zombie:
 
     def handle_collision(self, group, other):
         if group == 'ball:zombie':
-            if self.width == 200:
+            print('collision ball:zombie')
+            if self.width == 100:
                 self.width = self.width / 2
                 self.height = self.height / 2
 
