@@ -135,7 +135,7 @@ class Run:
 
 class Boy:
     def __init__(self):
-
+        self.is_live = True
         self.ball_count = 10
 
         self.font = load_font('ENCR10B.TTF', 16)
@@ -175,7 +175,7 @@ class Boy:
         draw_rectangle(*self.get_bb())
 
     def fire_ball(self):
-        if self.ball_count > 0:
+        if self.ball_count > 0 and self.is_live == True:
             self.ball_count -= 1
             ball = Ball(self.x+self.face_dir*40, self.y+100, self.face_dir * 15)
             game_world.add_object(ball, 1)
@@ -192,4 +192,5 @@ class Boy:
         if group == 'boy:ball': # 충돌한 상대가 공인 경우
             self.ball_count += 1
         elif group == 'boy:zombie':
+            self.is_live = False
             game_world.remove_object(self)

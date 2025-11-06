@@ -63,7 +63,6 @@ class Zombie:
 
     def handle_collision(self, group, other):
         if group == 'zombie:ball':
-            print('collision zombie:ball')
             if other.stopped == False:
                 if self.width == 100:
                     self.width = self.width / 2
@@ -71,6 +70,3 @@ class Zombie:
                     self.y -= 50
                 elif self.width == 50:
                     game_world.remove_object(self)
-
-        elif group == 'boy:zombie':
-            print('colllsion boy:zombie')
