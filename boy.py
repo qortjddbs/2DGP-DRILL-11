@@ -194,3 +194,4 @@ class Boy:
         elif group == 'boy:zombie':
             self.is_live = False
             game_world.remove_object(self)
+            game_framework.quit()
