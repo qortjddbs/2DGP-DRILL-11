@@ -37,6 +37,7 @@ def init():
     boy = Boy()
     game_world.add_object(boy, 1)
     game_world.add_collision_pair('boy:ball', boy, None)
+    game_world.add_collision_pair('boy:zombie', boy, None)
 
     # 바닥에 공 배치
     global balls
