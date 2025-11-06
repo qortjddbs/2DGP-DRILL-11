@@ -34,16 +34,15 @@ def init():
 
     boy = Boy()
     game_world.add_object(boy, 1)
+    game_world.add_collision_pair('boy:ball', boy, None)
 
     # 바닥에 공 배치
     global balls
     balls = [Ball(random.randint(100, 1600-100), 60, 0) for _ in range(20)]
     game_world.add_objects(balls, 1)
-
-    # 충돌 검사가 필요한 페어 등록
-    game_world.add_collision_pair('boy:ball', boy, None)
     for ball in balls:
         game_world.add_collision_pair('boy:ball', None, ball)
+
 
 def update():
     game_world.update()
