@@ -71,3 +71,6 @@ class Zombie:
                     self.y -= 50
                 elif self.width == 50:
                     game_world.remove_object(self)
+
+        elif group == 'boy:zombie':
+            print('colllsion boy:zombie')
